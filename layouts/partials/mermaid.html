@@ -1,0 +1,25 @@
+<!--  themes/<你的主题名>/layouts/partials/mermaid.html  -->
+{{ if .Params.mermaid }}
+<script type="module">
+    // 使用动态导入确保Mermaid模块加载完毕后再执行操作
+    import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs')
+        .then((mermaidModule) => {
+            const mermaid = mermaidModule.default;
+            // ✅ 极简配置
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark'
+            });
+            // ✅ 在Mermaid初始化后，转换代码块
+            Array.from(document.getElementsByClassName("language-mermaid")).forEach((el) => {
+                // ✅ 使用innerHTML以保留可能的HTML实体（如<<interface>>）
+                el.parentElement.outerHTML = `<div class="mermaid">${el.innerHTML}</div>`;
+            });
+            // ✅ 再次运行mermaid.init()来渲染新转换的图表
+            mermaid.init(undefined, '.mermaid');
+        })
+        .catch((error) => {
+            console.warn('Mermaid 加载失败，图表将显示为代码块:', error);
+        });
+</script>
+{{ end }}

@@ -1,0 +1,118 @@
+baseURL: https://defeatman.github.io/
+buildDrafts: false
+buildExpired: false
+buildFuture: false
+enableRobotsTXT: true
+defaultContentLanguage: zh
+languageCode: zh-cn
+hasCJKLanguage: true
+markup:
+  highlight:
+    noClasses: false
+menu:
+  main:
+  - identifier: posts
+    name: 目录
+    url: /posts/
+    weight: 10
+  - identifier: categories
+    name: 分类
+    url: /categories/
+    weight: 20
+  - identifier: tags
+    name: 标签
+    url: /tags/
+    weight: 30
+  - identifier: search
+    name: 搜索
+    url: /search/
+    weight: 40
+  - identifier: archives
+    name: 归档
+    url: /archives/
+    weight: 50
+minify:
+  disableXML: true
+  minifyOutput: true
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+pagination:
+  pagerSize: 5
+  pygmentsUseClasses: true
+params:
+  DateFormat: January 2, 2006
+  ProfileMode:
+    enabled: false
+    imageHeight: 120
+    imageTitle: profile image
+    imageUrl: https://github.com/defeatman.png?size=200
+    imageWidth: 120
+    subtitle: 学习随笔
+    title: DefeatMan
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowRssButtonInSectionTermList: false
+  ShowShareButtons: false
+  ShowWordCount: true
+  UseHugoToc: true
+  author: DefeatMan
+  comments: false
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+  defaultTheme: PaperMode
+  description: DefeatMan的博客
+  disableScrollToTop: false
+  disableSpecial1stPost: false
+  disableThemeToggle: false
+  editPost:
+    Text: Suggest Changes
+    URL: https://github.com/defeatman/defeatman.github.io/tree/master/content/
+    appendFilePath: true
+  env: production
+  fuseOpts:
+    distance: 1000
+    isCaseSensitive: false
+    keys:
+    - title
+    - permalink
+    - summary
+    - content
+    limit: 10
+    location: 0
+    minMatchCharLength: 0
+    shouldSort: true
+    threshold: 0.4
+  hideSummary: false
+  hidemeta: false
+  homeInfoParams:
+    content: 学习随笔
+    enabled: true
+    title: DefeatMan's Blog
+  images:
+  - <link or path of image for opengraph, twitter-cards>
+  keywords:
+  - C/C++
+  - 个人博客
+  - GitHub
+  - 开源
+  label:
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+    text: 主页
+  showtoc: true
+  socialIcons:
+  - name: github
+    url: https://github.com/defeatman
+  title: DefeatMan's Blog
+  tocopen: true
+
+theme:
+- PaperMod
+title: DefeatMan的博客
