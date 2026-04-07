@@ -1,0 +1,9 @@
+body {
+  font-family: 'CascadiaMono', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.post-content pre, code {
+  font-family: 'CascadiaMono', sans-serif;
+}
